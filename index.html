@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Calculadora de Playoffs </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container py-4 py-md-5">
+
+  <!-- Parte de arriba -->
+  <div class="text-center mb-4 mb-md-5">
+    <h1 class="display-5 fw-bold text-white">Playoffs Odd Calculator</h1>
+    <p class="mt-2">
+        Welcome to the playoffs odds calculator. Insert the team names and points 
+        in any order you like. "Calculate odds" button will still work, however, there
+        is a Sort button to sort by ascending order so you know the exact standings
+        and have an better experience visualizing results. 
+    </p>
+    <h5> IMPORTANT DISCLAIMER</h5>
+    <p>
+        This calculator was made assuming you're on Week 7 on an 8-Team Tournament.
+        Maybe in the future I can add 6-Team Tournaments and/or Week 6 Odds, 
+        but not right now.
+    </p>
+  </div>
+
+  <!-- Parte de arriba -->
+  <div class="row g-4 mb-4">
+    <div class="col-12">
+      <div class="card card-custom h-100">
+        <div class="card-header-custom d-flex justify-content-between align-items-center flex-wrap">
+          <h4 class="mb-0 fw-semibold">Team Standings</h4>
+          <!-- Botón Sort. Filtra de mayor a menor (como funcionan los standings) -->
+          <button id="sortButton" class="btn btn-outline-light btn-lg mt-2 mt-sm-0">
+            Sort
+          </button>
+        </div>
+        <div class="card-body p-3 p-md-4">
+          <div class="scrollable-table">
+            <table class="table table-custom table-hover align-middle mb-3">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 8%;" class="text-center"> Rank</th>
+                  <th scope="col" style="width: 27%;" class="text-center"> Team Name</th>
+                  <th scope="col" style="width: 12%;" class="text-center"> Points</th>
+                  <th scope="col" style="width: 15%;" class="text-center"> Differential</th>
+                  <th scope="col" style="width: 20%;" class="text-center"> Opponent</th>
+                  <th scope="col" style="width: 18%;" class="text-center"> Action</th>
+                </tr>
+              </thead>
+              <tbody id="ranking-table-body">
+                <!-- Las filas se generan dinámicamente con JavaScript -->
+              </tbody>
+            </table>
+          </div>
+          
+          <!-- Botón que hace el análisis completo -->
+          <div class="d-flex justify-content-center mt-3 mt-md-4">
+            <button id="mainGenerateBtn" class="btn btn-primary-gradient btn-lg px-5 py-2 fw-bold ">
+              Calculate everyone odds
+            </button>
+          </div>
+          <p class="text-secondary text-center mt-3 small mb-0">
+            <i class="bi bi-info-circle-fill"></i> This button generates the odds for all teams in ascending order.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Caja de resultados -->
+  <div class="row g-4">
+    <div class="col-12">
+      <div class="card card-custom output-card h-100">
+        <div class="card-header-custom d-flex justify-content-between align-items-center flex-wrap">
+          <h4 class="mb-0 fw-semibold"> Odds will be generated here</h4>
+        </div>
+        <div class="card-body d-flex flex-column" style="min-height: 380px;">
+          <div id="dynamicOutputArea" class="lorem-text p-3 rounded-3 flex-grow-1" background-color: #2a2a2a;">
+            <span class="text-light-emphasis fst-italic"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center mt-5 pt-2">
+    <hr class="opacity-25 bg-secondary">
+    <p class="small text-secondary">Made by Akaru Kokuyo. Feel free to reach out to me on discord if you notice anything weird! (discord: akaruyo)</p>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

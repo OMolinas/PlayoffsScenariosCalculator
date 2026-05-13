@@ -1,0 +1,194 @@
+body {
+  background-color: #1F1B1A;
+  font-family: system-ui, 'Segoe UI', 'Inter', Roboto, 'Helvetica Neue', sans-serif;
+  color: #f0f0f0;
+}
+
+/* Tarjetas oscuras */
+.card-custom {
+  border: none;
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+  background: #2C2A29;
+  transition: transform 0.1s ease;
+}
+
+.card-header-custom {
+  background: linear-gradient(135deg, #0e2a36 0%, #1c3f4f 100%);
+  color: white;
+  border-radius: 1.25rem 1.25rem 0 0 !important;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid #3a4e5a;
+}
+
+.badge-rank {
+  background-color: #3a4a55;
+  color: #f0f0f0;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: 40px;
+  font-size: 0.9rem;
+  display: inline-block;
+  text-align: center;
+  width: 44px;
+}
+
+.table-custom {
+  color: #e0e0e0;
+}
+
+.table-custom th {
+  background-color: #1e2a30;
+  font-weight: 700;
+  color: #f8f9fa;
+  border-bottom: 2px solid #3a5a6a;
+  font-size: 0.9rem;
+}
+
+.table-custom td {
+  vertical-align: middle;
+  padding: 0.75rem 0.5rem;
+  border-color: #3a484e;
+}
+
+.form-control-sm-custom, .form-select-sm-custom {
+  font-size: 0.85rem;
+  border-radius: 12px;
+  border: 1px solid #5a6e7a;
+  background-color: #1f2a2f;
+  color: #f0f0f0;
+  transition: 0.1s;
+}
+
+.form-control-sm-custom:focus, .form-select-sm-custom:focus {
+  border-color: #6c9ebd;
+  background-color: #2a373e;
+  color: white;
+  box-shadow: 0 0 0 0.2rem rgba(108, 158, 189, 0.25);
+}
+
+.form-control-sm-custom::placeholder {
+  color: #9aaeb9;
+}
+
+.form-select-sm-custom {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23aaccdd' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-size: 14px;
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  appearance: none;
+  padding-right: 2rem;
+}
+
+/* Botón de fila (Ver probabilidad) */
+.btn-sm-icon {
+  border-radius: 40px;
+  background: #2d4a5a;
+  border: none;
+  color: #f0f0f0;
+  font-weight: 500;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.9rem;
+  width: 100%;
+}
+
+.btn-sm-icon:hover {
+  background: #3e6a80;
+  color: white;
+}
+
+/* Botones (sort y generate full analysis) */
+.btn-primary-gradient {
+  background: linear-gradient(95deg, #2c6e8f, #1b4f6b);
+  border: none;
+  padding: 0.75rem 1.75rem;
+  font-weight: 600;
+  border-radius: 60px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-primary-gradient:hover {
+  background: linear-gradient(95deg, #3a86a8, #226180);
+  transform: translateY(-2px);
+  color: white;
+}
+
+.btn-outline-light {
+  border-color: #8aaec0;
+  color: #e0e0e0;
+}
+
+.btn-outline-light:hover {
+  background-color: #2e5a6e;
+  border-color: #b8d4e4;
+  color: white;
+}
+
+.output-card {
+  background: #2C2A29;
+  border-radius: 1.25rem;
+  min-height: 380px;
+}
+
+.lorem-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #eaeef2;
+  text-align: justify;
+}
+
+footer a, footer {
+  color: #8faaaf;
+}
+
+@media (max-width: 768px) {
+  .card-header-custom h4 {
+    font-size: 1.25rem;
+  }
+  .table-custom th, .table-custom td {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.25rem;
+  }
+  .btn-primary-gradient {
+    width: 100%;
+  }
+  .btn-sm-icon {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+.scrollable-table {
+  overflow-x: auto;
+}
+
+.fade-in {
+  animation: quickFade 0.25s ease-out;
+}
+
+@keyframes quickFade {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.btn-sm-icon i, .btn-primary-gradient i {
+  margin-right: 4px;
+}
+
+.table-custom input, .table-custom select {
+  background-color: #1f2a2f;
+  color: #f5f5f5;
+  font-weight: 500;
+}
+
+.badge-rank {
+  background: #2f4a58;
+  font-weight: 700;
+}
+
+.card-header-custom h5 i, .card-header-custom h4 i {
+  margin-right: 8px;
+}
